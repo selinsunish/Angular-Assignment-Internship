@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "name": "Item A",
+      "prices": [10, 20]
+    },
+    {
+      "name": "T-Shirt",
+      "sizes": {
+        "S": [10, 20],
+        "M": [15, 25]
+      }
+    },
+    {
+      "name": "Item B",
+      "prices": [10, 20],
+      "additional": {
+        "type": "fixed",
+        "value": 5
+      }
+    }
+  ]
+}

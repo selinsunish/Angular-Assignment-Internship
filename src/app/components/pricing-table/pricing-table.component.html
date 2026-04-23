@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Label</th>
+      <th *ngFor="let col of store.columns()">{{ col }}</th>
+      <th>
+        <button (click)="store.addColumn()">Add Column</button>
+        <button [disabled]="store.columns().length <= 1" (click)="removeColumn()">Remove Column</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of store.rows(); let i = index">
+      <td>{{ row.label }}</td>
+      <td *ngFor="let val of row.values; let j = index">
+        <input type="number" [value]="val === 0 ? '' : val" (input)="updateCell(i, j, $event)" />
+      </td>
+    </tr>
+    <tr>
+      <td [attr.colspan]="store.columns().length + 2">
+        <button (click)="store.addRow()">Add Row</button>
+        <button (click)="store.removeRow()">Remove Row</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

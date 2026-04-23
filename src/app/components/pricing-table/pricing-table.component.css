@@ -1,0 +1,46 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+input[type="number"] {
+  width: 60px;
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+
+input[type="number"]:focus {
+  outline: 1px solid #007bff;
+}
+
+button {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #e8e8e8;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
